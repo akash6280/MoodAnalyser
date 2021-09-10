@@ -9,7 +9,7 @@ public class MoodAnalyser {
 	}
 	
 	public MoodAnalyser() {
-		this.message = "";
+		
 	}
     public String analyseMood() {
 
