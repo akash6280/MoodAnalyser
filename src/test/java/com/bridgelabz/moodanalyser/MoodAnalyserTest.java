@@ -17,16 +17,18 @@ import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 
 public class MoodAnalyserTest {
+	
 	@Test
-	public void analyzeMood_SadMessage_SAD() throws Exception {
-		MoodAnalyser moodAnalyzer = new MoodAnalyser();
-		String mood = moodAnalyzer.analyseMood("This is a sad message");
-		Assert.assertThat(mood, CoreMatchers.is("SAD"));
+	public void  givenMessage_WhenSad_ShouldReturnSad() {
+		MoodAnalyser moodAnalyzer = new MoodAnalyser("This is a sad message");
+		String mood = moodAnalyzer.analyseMood();
+		Assert.assertEquals("SAD",mood);
 	}
 	
-	public void analyzeMood_HappyMessage_HAPPY() throws Exception {
-		MoodAnalyser moodAnalyzer = new MoodAnalyser();
-		String mood = moodAnalyzer.analyseMood("This is a happy message");
-		Assert.assertThat(mood, CoreMatchers.is("HAPPY"));
+	@Test
+	public void  givenMessage_WhenHappy_ShouldReturnHappy() {
+		MoodAnalyser moodAnalyzer = new MoodAnalyser("This is a happy message");
+		String mood = moodAnalyzer.analyseMood();
+		Assert.assertEquals("HAPPY",mood);
 	}
 }
