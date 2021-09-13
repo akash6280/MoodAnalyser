@@ -19,7 +19,7 @@ import org.junit.Assert;
 public class MoodAnalyserTest {
 	
 	@Test
-	public void  givenMessage_WhenSad_ShouldReturnSad() throws Exception {
+	public void  givenMessage_WhenSad_ShouldReturnSad() {
 		MoodAnalyser moodAnalyzer = new MoodAnalyser("This is a sad message");
 		String mood = moodAnalyzer.analyseMood();
 		Assert.assertEquals("SAD",mood);
@@ -27,7 +27,7 @@ public class MoodAnalyserTest {
 	
 	
 	@Test
-	public void  givenMessage_WhenHappy_ShouldReturnHappy() throws Exception {
+	public void  givenMessage_WhenHappy_ShouldReturnHappy() {
 		MoodAnalyser moodAnalyzer = new MoodAnalyser("This is a happy message");
 		String mood = moodAnalyzer.analyseMood();
 		Assert.assertEquals("HAPPY",mood);
